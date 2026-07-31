@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Astor Creek — Two-Home Comparison &amp; Area Briefing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Primary */
+  --salmon:#FF7877;
+  --black:#484848;
+  --teal:#008489;
+  /* Secondary */
+  --bronze:#736739;
+  --olive:#617D46;
+  --magenta:#A21154;
+  --red:#A00904;
+  --fuchsia:#D4149C;
+  /* Neutrals */
+  --charcoal:#222222;
+  --foggy:#767676;
+  --border:#EBEBEB;
+  --bg-alt:#F7F7F7;
+  --teal-tint:#E6F1F1;
+  --teal-mid:#B2D6D7;
+  --teal-dark:#00686C;
+  --salmon-tint:#FFEDED;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:#FFFFFF;color:var(--black);
+  font-family:"DM Sans",-apple-system,BlinkMacSystemFont,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1040px;margin:0 auto;padding:0 32px 100px}
+
+/* ---------- masthead ---------- */
+.mast{border-bottom:1px solid var(--border);padding:64px 0 44px}
+.mast-inner{max-width:1040px;margin:0 auto;padding:0 32px}
+.eyebrow{
+  font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--teal);margin:0 0 18px;
+}
+h1{
+  font-size:clamp(32px,5vw,52px);font-weight:700;line-height:1.1;
+  letter-spacing:-.022em;color:var(--charcoal);margin:0 0 18px;
+}
+.mast .lede{margin:0;max-width:62ch;color:var(--foggy);font-size:17px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.pill{
+  display:inline-block;border:1px solid var(--border);border-radius:4px;
+  padding:7px 14px;font-size:12px;font-weight:500;color:var(--black);background:#fff;
+}
+.pill.solid{background:var(--teal);border-color:var(--teal);color:#fff}
+.pill.salmon{background:var(--salmon);border-color:var(--salmon);color:#fff}
+
+/* ---------- sections ---------- */
+section{padding:56px 0 0;border-top:1px solid var(--border);margin-top:56px}
+section:first-of-type{border-top:none;margin-top:0}
+.tag{
+  font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--teal);margin:0 0 10px;
+}
+h2{
+  font-size:clamp(24px,3.2vw,34px);font-weight:700;line-height:1.15;
+  letter-spacing:-.018em;color:var(--charcoal);margin:0 0 10px;
+}
+.dek{color:var(--foggy);margin:0 0 28px;max-width:66ch;font-size:17px}
+h3{font-weight:700;font-size:18px;color:var(--charcoal);margin:36px 0 12px}
+p{margin:0 0 16px}
+
+/* ---------- tables ---------- */
+.t-wrap{margin:0 0 10px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+caption{
+  caption-side:top;text-align:left;font-size:12px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--foggy);padding:0 0 12px;
+}
+th{
+  text-align:left;font-size:12px;font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--foggy);padding:0 14px 10px 0;
+  border-bottom:2px solid var(--charcoal);
+}
+td{padding:14px 14px 14px 0;border-bottom:1px solid var(--border);vertical-align:top}
+tbody tr:last-child td{border-bottom:2px solid var(--charcoal)}
+.num{text-align:right;white-space:nowrap;padding-right:0;font-variant-numeric:tabular-nums}
+th.num{text-align:right;padding-right:0}
+.name{font-weight:500;color:var(--charcoal)}
+.sub{display:block;color:var(--foggy);font-size:13.5px;font-weight:400;margin-top:3px}
+.up{color:var(--olive);font-weight:700}
+.down{color:var(--red);font-weight:700}
+tr.hi td{background:var(--teal-tint)}
+
+/* ---------- home cards ---------- */
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:0 0 28px}
+.home{border:1px solid var(--border);border-radius:8px;padding:26px 24px;background:#fff}
+.home.accent{border-color:var(--teal-mid);box-shadow:0 1px 0 var(--teal-tint)}
+.home .lot{
+  font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--teal);margin:0 0 8px;
+}
+.home h4{font-size:22px;font-weight:700;color:var(--charcoal);margin:0 0 4px;line-height:1.2}
+.home .addr{color:var(--foggy);font-size:14px;margin:0 0 18px}
+.home .price{font-size:30px;font-weight:700;color:var(--charcoal);letter-spacing:-.02em;margin:0 0 18px}
+.home dl{margin:0;font-size:14px}
+.home dt{
+  font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--foggy);margin-top:14px;
+}
+.home dd{margin:3px 0 0;color:var(--black)}
+.good{color:var(--olive);font-weight:700}
+.bad{color:var(--red);font-weight:700}
+
+/* ---------- cost breakdown ---------- */
+.cost{border:1px solid var(--border);border-radius:8px;padding:28px 26px;margin:0 0 22px;background:#fff}
+.cost-head{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;
+  margin:0 0 22px;padding-bottom:18px;border-bottom:1px solid var(--border);
+}
+.cost-total{font-size:clamp(30px,4.4vw,42px);font-weight:700;color:var(--charcoal);letter-spacing:-.025em}
+.cost-total span{font-size:16px;font-weight:400;color:var(--foggy);letter-spacing:0}
+.cost-cond{font-size:12.5px;color:var(--foggy);margin-left:auto;text-align:right;line-height:1.5}
+.bar{display:flex;width:100%;height:32px;border-radius:4px;overflow:hidden;margin:0 0 18px}
+.bar div{height:100%}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px 22px}
+.leg{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.45}
+.sw{width:12px;height:12px;border-radius:2px;flex:0 0 12px;margin-top:5px}
+.leg b{font-weight:700;color:var(--charcoal);display:block;font-variant-numeric:tabular-nums}
+.leg span{color:var(--foggy);font-size:13px}
+
+/* ---------- callouts ---------- */
+.callout{border-radius:8px;padding:20px 22px;margin:24px 0;font-size:15px}
+.callout.warn{background:var(--salmon-tint);border:1px solid #FFD4D4}
+.callout.warn strong{color:var(--red)}
+.callout.info{background:var(--teal-tint);border:1px solid var(--teal-mid)}
+.callout.info strong{color:var(--teal-dark)}
+.callout p:last-child{margin-bottom:0}
+
+/* ---------- checklist ---------- */
+ol.check{list-style:none;counter-reset:c;padding:0;margin:0}
+ol.check li{
+  counter-increment:c;position:relative;padding:16px 0 16px 44px;
+  border-bottom:1px solid var(--border);font-size:15px;
+}
+ol.check li::before{
+  content:counter(c);position:absolute;left:0;top:16px;
+  width:26px;height:26px;border-radius:50%;background:var(--teal-tint);
+  color:var(--teal-dark);font-size:12px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+ol.check li b{display:block;font-weight:700;color:var(--charcoal);margin-bottom:3px}
+
+/* ---------- footer ---------- */
+footer{
+  margin-top:64px;padding-top:28px;border-top:2px solid var(--charcoal);
+  font-size:13px;color:var(--foggy);line-height:1.7;
+}
+footer h4{
+  font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--charcoal);margin:0 0 12px}
+footer ul{margin:0 0 22px;padding-left:18px}
+footer li{margin-bottom:4px}
+
+@media (max-width:760px){
+  .wrap{padding:0 20px 70px}
+  .mast{padding:44px 0 34px}
+  .mast-inner{padding:0 20px}
+  .pair{grid-template-columns:1fr}
+  table{font-size:14px}
+  th,td{padding:12px 12px}
+  .cost-cond{margin-left:0;text-align:left;width:100%}
+  .t-wrap{overflow-x:auto}
+}
+@media print{
+  body{font-size:10.5pt}
+  .mast{padding:0 0 20pt;margin:0 0 20pt}
+  .mast-inner{padding:0}
+  section,.cost,.t-wrap,.callout,.pair,.home{break-inside:avoid;page-break-inside:avoid}
+  .home.accent{box-shadow:none}
+}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="mast-inner">
+    <p class="eyebrow">Two-Home Comparison &amp; Area Briefing · 31 July 2026</p>
+    <h1>Astor Creek Golf &amp; Country Club</h1>
+    <p class="lede">Two Kolter inventory homes under consideration — the Waverly at 13377 SW Shinnecock Drive and the Priscilla at 14176 SW Shinnecock Drive — inside a gated 18-hole golf community in western Port St. Lucie, Florida. What follows is both homes side by side, the location, the market, and what each one actually costs to own.</p>
+    <div class="pills">
+      <span class="pill solid">Port St. Lucie · ZIP 34987</span>
+      <span class="pill">St. Lucie County</span>
+      <span class="pill">Kolter Homes</span>
+      <span class="pill">±900 homes planned</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <p class="tag">The two homes</p>
+  <h2>Waverly vs. Priscilla</h2>
+  <p class="dek">Both are completed or near-completed Kolter inventory homes — designed and finished by the builder, sold as-is rather than built to order. They are two of eight inventory homes Kolter currently has at Astor Creek. The Waverly is the most expensive home in that set; the Priscilla sits in the middle.</p>
+
+  <div class="pair">
+    <div class="home">
+      <p class="lot">Homesite 04.177 · Madison Collection</p>
+      <h4>Waverly</h4>
+      <p class="addr">13377 SW Shinnecock Drive</p>
+      <p class="price">$1,300,990</p>
+      <dl>
+        <dt>Living area</dt><dd>3,345 sq ft <span class="sub">4,540 sq ft total under roof</span></dd>
+        <dt>Price per living foot</dt><dd>$389</dd>
+        <dt>Beds / baths / garage</dt><dd>3 bd · 3 full + 1 half ba · 3-car</dd>
+        <dt>Move-in</dt><dd>Immediate</dd>
+        <dt>Rooms</dt><dd>Flex room, dedicated dining room, extended Owner's Suite with additional covered lanai</dd>
+        <dt>Kitchen</dt><dd>Chef Kitchen — Nordic cabinetry, expanded island, wrap-around wet bar. <strong>Monogram</strong> package: 48-inch built-in refrigerator, wall oven, cooktop, microwave, dishwasher, wine reserve, beverage refrigeration, custom wood hood.</dd>
+        <dt>Owner's bath</dt><dd>Freestanding soaking tub plus 96-inch frameless deluxe shower, tile to ceiling</dd>
+        <dt>Outdoor kitchen</dt><dd class="bad">Pre-plumb only — not built</dd>
+        <dt>Also includes</dt><dd>16-ft slider, solid-core interior doors, enhanced millwork, keyless garage entry</dd>
+        <dt>Position in inventory</dt><dd>8 of 8 — the top of Kolter's price range here</dd>
+      </dl>
+    </div>
+    <div class="home accent">
+      <p class="lot">Homesite 07.234 · Hudson Collection</p>
+      <h4>Priscilla</h4>
+      <p class="addr">14176 SW Shinnecock Drive</p>
+      <p class="price">$945,990</p>
+      <dl>
+        <dt>Living area</dt><dd>2,554 sq ft <span class="sub">3,511 sq ft total under roof</span></dd>
+        <dt>Price per living foot</dt><dd>$370</dd>
+        <dt>Beds / baths / garage</dt><dd>3 bd · 3 full ba · 3-car</dd>
+        <dt>Move-in</dt><dd>August 2026</dd>
+        <dt>Rooms</dt><dd>Flex room, extended Owner's Suite with additional lanai. No separate dining room.</dd>
+        <dt>Kitchen</dt><dd>Gourmet Kitchen — alabaster cabinetry, oversized single-bowl sink. <strong>GE Profile</strong> package: French door refrigerator, wall oven, cooktop, microwave, dishwasher, wall-mount hood.</dd>
+        <dt>Owner's bath</dt><dd>96-inch frameless deluxe shower, tile to ceiling. No soaking tub.</dd>
+        <dt>Outdoor kitchen</dt><dd class="good">Built and finished — grill, beverage fridge, sink, privacy wall</dd>
+        <dt>Also includes</dt><dd>16-ft slider, private guest suite with walk-in shower, smooth wall finishes, keyless garage entry</dd>
+        <dt>Position in inventory</dt><dd>3 of 8</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="t-wrap">
+  <table>
+    <caption>The gap between them</caption>
+    <thead><tr><th>Measure</th><th class="num">Waverly</th><th class="num">Priscilla</th><th class="num">Difference</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Purchase price</td><td class="num">$1,300,990</td><td class="num">$945,990</td><td class="num down">+$355,000</td></tr>
+      <tr><td class="name">Living area</td><td class="num">3,345</td><td class="num">2,554</td><td class="num">+791 sq ft</td></tr>
+      <tr><td class="name">Price per living foot</td><td class="num">$389</td><td class="num">$370</td><td class="num down">+$19</td></tr>
+      <tr><td class="name">Cost of each extra living foot</td><td class="num">—</td><td class="num">—</td><td class="num down">$449</td></tr>
+      <tr><td class="name">20% down payment</td><td class="num">$260,198</td><td class="num">$189,198</td><td class="num down">+$71,000</td></tr>
+      <tr><td class="name">Monthly carry, financed</td><td class="num">$10,465</td><td class="num">$7,804</td><td class="num down">+$2,661</td></tr>
+      <tr><td class="name">Annual carry if paid cash</td><td class="num">$46,726</td><td class="num">$36,306</td><td class="num down">+$10,420</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout warn">
+    <p><strong>The step up costs $449 for every additional square foot.</strong> That is well above what either home charges on average ($370–$389), which means the extra space in the Waverly is priced at a premium to the house it is attached to — not a discount for buying in bulk. The $355,000 difference buys 791 square feet, a half bath, a dedicated dining room, a wet bar, a soaking tub, upgraded millwork and solid-core doors, and a Monogram appliance package in place of GE Profile. Monogram over GE Profile on a kitchen this size is a real upgrade, plausibly $30,000–$50,000 of the gap. The rest is space and finish.</p>
+    <p><strong>And note what the more expensive house does not have:</strong> the Waverly's outdoor kitchen is a pre-plumb only. The Priscilla's is built and finished — grill, beverage refrigerator, sink, privacy wall. The $355,000-cheaper home comes with the outdoor kitchen already in it.</p>
+  </div>
+
+  <div class="callout info">
+    <p><strong>The Priscilla's premium over base is knowable; the Waverly's is not.</strong> The Priscilla floor plan starts at $697,990 to build. At $945,990, this home carries <strong>$248,000 (+36%) in homesite premium and Design Studio options</strong> above base. Kolter does not publish a base price for the Waverly, but extrapolating from the eight published base prices puts it somewhere near $840,000 — which would imply a premium in the neighborhood of $460,000. That estimate is mine, not Kolter's. <strong>Ask the sales office for the Waverly's actual base price</strong> — it is the single most useful number in this negotiation.</p>
+  </div>
+
+  <h3>Where they sit against everything else Kolter has here</h3>
+  <p>Kolter's full current inventory at Astor Creek, verified 31 July 2026. Use this to judge whether either home is priced fairly.</p>
+
+  <div class="t-wrap">
+  <table>
+    <caption>Kolter inventory — Astor Creek, July 2026</caption>
+    <thead><tr><th>Address</th><th>Plan</th><th class="num">Total sq ft</th><th class="num">Price</th></tr></thead>
+    <tbody>
+      <tr><td class="name">13008 SW Shinnecock Dr</td><td>3 bd / 3 ba</td><td class="num">2,554</td><td class="num">$890,000</td></tr>
+      <tr><td class="name">13769 SW Shinnecock Dr</td><td>Leslie · 3 bd / 3 ba</td><td class="num">2,196</td><td class="num">$899,990</td></tr>
+      <tr class="hi"><td class="name">14176 SW Shinnecock Dr<span class="sub">Under consideration · ready August 2026 · summer kitchen, 16-ft slider, extended owner's suite</span></td><td>Priscilla · 3 bd / 3 ba</td><td class="num">3,511</td><td class="num">$945,990<span class="sub">$269 per total sq ft — best value on the board</span></td></tr>
+      <tr><td class="name">14072 SW Shinnecock Dr</td><td>Priscilla · 3 bd / 3 ba</td><td class="num">3,511</td><td class="num">$1,005,990</td></tr>
+      <tr><td class="name">14224 SW Shinnecock Dr</td><td>Sophia · 3 bd / 3.5 ba</td><td class="num">3,932</td><td class="num">$1,023,990</td></tr>
+      <tr><td class="name">13585 SW Shinnecock Dr</td><td>Rebecca · 3 bd / 3 ba</td><td class="num">2,586</td><td class="num">$1,037,990<span class="sub">$401 per sq ft — worst value on the board</span></td></tr>
+      <tr><td class="name">12961 SW Shinnecock Dr</td><td>Victoria · 3 bd / 3.5 ba</td><td class="num">4,698</td><td class="num">$1,288,990</td></tr>
+      <tr class="hi"><td class="name">13377 SW Shinnecock Dr<span class="sub">Under consideration · move-in immediate</span></td><td>Waverly · 3 bd / 3.5 ba</td><td class="num">4,540</td><td class="num">$1,300,990<span class="sub">$287 per total sq ft</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout warn">
+    <p><strong>Read the square footage carefully — this is a real trap.</strong> Kolter quotes two different numbers for every home: total square feet (everything under roof, including garage and lanai) and living area square feet (air-conditioned space only). They differ by roughly 1,000 feet on these two houses. The listing aggregators mix them up constantly — one site lists the Priscilla as "3,511 sq ft" when its living area is 2,554, a 27% overstatement. Before comparing on price per foot, make sure both numbers came from the same column.</p>
+  </div>
+
+  <h3>The base-price comparison worth running</h3>
+  <p>Kolter's to-be-built base prices start at $581,990 for the smallest plan and run to roughly $732,000 for the Sophia, before homesite premium and Design Studio options. Across the finished inventory homes, the gap between base and asking runs $218,000 to $322,000 — and on the Priscilla at 14176 it is $248,000. That entire gap is lot premium plus someone else's finish selections, and it is the strongest number to negotiate against. Kolter does not publish a base price for the Waverly; ask for it.</p>
+</section>
+
+<section>
+  <p class="tag">Carry</p>
+  <h2>What each one costs per month</h2>
+  <p class="dek">Purchase price is the easy number. In Florida the carrying cost is what surprises people from the Northeast — property tax resets to your purchase price, insurance runs about three times the national average, and here there are mandatory club dues on top of an HOA.</p>
+
+  <h3>Waverly — 13377 SW Shinnecock Drive</h3>
+
+  <div class="cost">
+    <div class="cost-head">
+      <div class="cost-total">$10,465<span> / month, all in</span></div>
+      <div class="cost-cond">$1,300,990 purchase · 20% down<br>6.49% 30-year · homesteaded</div>
+    </div>
+    <div class="bar" role="img" aria-label="Waverly monthly cost breakdown: principal and interest 6,572; property tax 2,382; insurance 705; club dues 417; HOA 240; CDD estimate 150">
+      <div style="width:62.8%;background:#008489"></div>
+      <div style="width:22.8%;background:#00686C"></div>
+      <div style="width:6.7%;background:#FF7877"></div>
+      <div style="width:4.0%;background:#736739"></div>
+      <div style="width:2.3%;background:#617D46"></div>
+      <div style="width:1.4%;background:#A21154"></div>
+    </div>
+    <div class="legend">
+      <div class="leg"><span class="sw" style="background:#008489"></span><div><b>$6,572</b><span>Principal &amp; interest</span></div></div>
+      <div class="leg"><span class="sw" style="background:#00686C"></span><div><b>$2,382</b><span>Property tax</span></div></div>
+      <div class="leg"><span class="sw" style="background:#FF7877"></span><div><b>~$705</b><span>Homeowners insurance</span></div></div>
+      <div class="leg"><span class="sw" style="background:#736739"></span><div><b>~$417</b><span>Club dues (mandatory)</span></div></div>
+      <div class="leg"><span class="sw" style="background:#617D46"></span><div><b>$240</b><span>HOA</span></div></div>
+      <div class="leg"><span class="sw" style="background:#A21154"></span><div><b>~$150</b><span>CDD — unconfirmed</span></div></div>
+    </div>
+  </div>
+  <p>Down payment <strong>$260,198</strong>. Paid all cash, the Waverly still costs <strong>$3,894 a month — $46,726 a year</strong> — to hold.</p>
+
+  <h3>Priscilla — 14176 SW Shinnecock Drive</h3>
+
+  <div class="cost">
+    <div class="cost-head">
+      <div class="cost-total">$7,804<span> / month, all in</span></div>
+      <div class="cost-cond">$945,990 purchase · 20% down<br>6.49% 30-year · homesteaded</div>
+    </div>
+    <div class="bar" role="img" aria-label="Priscilla monthly cost breakdown: principal and interest 4,778; property tax 1,706; insurance 512; club dues 417; HOA 240; CDD estimate 150">
+      <div style="width:61.2%;background:#008489"></div>
+      <div style="width:21.9%;background:#00686C"></div>
+      <div style="width:6.6%;background:#FF7877"></div>
+      <div style="width:5.3%;background:#736739"></div>
+      <div style="width:3.1%;background:#617D46"></div>
+      <div style="width:1.9%;background:#A21154"></div>
+    </div>
+    <div class="legend">
+      <div class="leg"><span class="sw" style="background:#008489"></span><div><b>$4,778</b><span>Principal &amp; interest</span></div></div>
+      <div class="leg"><span class="sw" style="background:#00686C"></span><div><b>$1,706</b><span>Property tax</span></div></div>
+      <div class="leg"><span class="sw" style="background:#FF7877"></span><div><b>~$512</b><span>Homeowners insurance</span></div></div>
+      <div class="leg"><span class="sw" style="background:#736739"></span><div><b>~$417</b><span>Club dues (mandatory)</span></div></div>
+      <div class="leg"><span class="sw" style="background:#617D46"></span><div><b>$240</b><span>HOA</span></div></div>
+      <div class="leg"><span class="sw" style="background:#A21154"></span><div><b>~$150</b><span>CDD — unconfirmed</span></div></div>
+    </div>
+  </div>
+  <p>Down payment <strong>$189,198</strong>. Paid all cash, the Priscilla costs <strong>$3,026 a month — $36,306 a year</strong> — to hold.</p>
+
+  <div class="callout warn">
+    <p><strong>The recurring difference is $31,938 a year, every year.</strong> That is the carry gap between the two homes — $2,661 a month — and unlike the purchase price it never gets paid off. Over ten years of ownership it compounds to more than $319,000 before any tax-roll increases, which is roughly the purchase-price difference all over again. Property tax and insurance both scale with value, so the gap widens as the market does.</p>
+  </div>
+
+  <h3>Where each line comes from</h3>
+  <div class="t-wrap">
+  <table>
+    <tbody>
+      <tr><td class="name">Property tax</td><td>St. Lucie County's total 2025 millage is about <strong>22.85 mills</strong>. <strong>Do not use the current tax figure shown on Zillow.</strong> Florida's Save Our Homes cap holds long-time owners' assessments artificially low; a new purchase resets to what you pay. ZIP 34987 already carries the highest median tax bill in the county at $5,962 — and that is against a county median home price near $330,000, a quarter of what these homes cost.</td></tr>
+      <tr><td class="name">Insurance</td><td>Florida's statewide average is roughly <strong>$8,458 a year</strong>, about three times the national average. New CBS construction with impact glass and a brand-new roof should price well below that per dollar insured — but FEMA rates this location's hurricane risk as <strong>Very High (99.1)</strong>, and replacement cost on a $1M+ home is substantial. Budget $4,000–$9,000 and get the actual quote before signing.</td></tr>
+      <tr><td class="name">HOA</td><td>Kolter and the listing feeds both state <strong>$240 a month</strong>, covering lawn, irrigation, the manned gate and common areas. Third-party sources report anywhere from $225 to $416. Get the recorded figure in writing.</td></tr>
+      <tr><td class="name">Club dues</td><td>Membership comes with the house and multiple sources report <strong>no initiation fee</strong> — genuinely unusual, and worth real money. Annual dues are reported around <strong>$5,000</strong>. Mandatory, not optional. Note that at least one resale listing in the community advertised a $50,000 golf membership initiation being paid by the seller, which suggests the no-initiation structure may not apply universally or may be changing. Ask directly.</td></tr>
+      <tr><td class="name">CDD</td><td><strong>Unconfirmed and material.</strong> Community Development District assessments are common in this exact corridor and typically run <strong>$1,000–$3,500 a year</strong>, billed on the property tax statement, often on a 20–30 year term with a lump-sum payoff option. Ask whether Astor Creek carries one, the annual amount, remaining term, and payoff balance.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <p class="tag">Site</p>
+  <h2>What Astor Creek is</h2>
+  <p class="dek">A new-construction, all-ages gated golf community in western Port St. Lucie, immediately next to PGA Village. Not 55+ — which matters for both the day-to-day feel and the eventual resale pool.</p>
+
+  <div class="t-wrap">
+  <table>
+    <tbody>
+      <tr><td class="name">Golf</td><td>Private 18-hole championship course designed by Chris Wilczynski. A resident golf membership is included with every new home purchase — you are not buying in and then applying to a club.</td></tr>
+      <tr><td class="name">Clubhouse</td><td>The 1566 Club: full-service restaurant and bar with indoor and outdoor dining, golf shop, locker rooms, EGYM-powered fitness center, resort-style heated pool with lap lanes and beach entry overlooking the course.</td></tr>
+      <tr><td class="name">Racquet &amp; courts</td><td>4 tennis courts, 16 pickleball courts, basketball court, 2 bocce courts, event lawn. Full-time lifestyle director on staff.</td></tr>
+      <tr><td class="name">Scale</td><td>Roughly 900 single-family homes planned. Still actively selling, so construction traffic and phased amenity delivery are live considerations.</td></tr>
+      <tr><td class="name">Second builder</td><td>Taylor Morrison also builds inside Astor Creek, starting from <strong>$495,900</strong> across 13 plans. Their inventory competes directly with Kolter's inside the same gates — useful leverage, and worth walking.</td></tr>
+      <tr><td class="name">Construction</td><td>CBS block with impact windows on current product. All plans single-story with optional second-floor bonus rooms. Homes run 2–6 bedrooms and up to roughly 5,800 total square feet.</td></tr>
+      <tr><td class="name">Closing timeline</td><td>Contract to close typically 30–40 days on a completed home.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Environment &amp; setting</h3>
+  <div class="t-wrap">
+  <table>
+    <tbody>
+      <tr><td class="name">Hurricane risk</td><td><strong>Very High (FEMA index 99.1).</strong> This is Florida's Atlantic coast — it is the honest headline, and it is priced into every insurance quote you will receive.</td></tr>
+      <tr><td class="name">Flood risk</td><td>Riverine flooding: Relatively Moderate (93.0). Coastal flooding: Relatively Moderate (78.1). Confirm the specific flood zone for each homesite — it changes the insurance requirement.</td></tr>
+      <tr><td class="name">Noise &amp; air</td><td>Soundscore 88 (Calm) across traffic, local and airport sources. 30-day average air quality rated Good.</td></tr>
+      <tr><td class="name">Walkability</td><td>Walk Score <strong>0 — fully car-dependent.</strong> Bike Score 43. Nothing is reachable on foot outside the gates. For an active retiree this is normal for the area; for anyone who might eventually stop driving it is worth thinking about now.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <p class="tag">Access</p>
+  <h2>Distances from the front gate</h2>
+  <p class="dek">Calculated from the community entrance at 8975 SW Shinnecock Drive. Drive times are estimates over normal traffic.</p>
+
+  <div class="t-wrap">
+  <table>
+    <caption>Everyday</caption>
+    <thead><tr><th>Destination</th><th class="num">Miles</th><th class="num">Drive</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Publix<span class="sub">SW Commerce Centre Dr</span></td><td class="num">2.2</td><td class="num">~5 min</td></tr>
+      <tr><td class="name">The Fresh Market<span class="sub">Tradition</span></td><td class="num">2.9</td><td class="num">~6 min</td></tr>
+      <tr><td class="name">Target &amp; Village Pkwy retail</td><td class="num">3.5</td><td class="num">~8 min</td></tr>
+      <tr><td class="name">Cleveland Clinic Tradition Hospital<span class="sub">Full-service, 24-hour ER</span></td><td class="num">3.5</td><td class="num">~8 min</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="t-wrap">
+  <table>
+    <caption>Towns, beaches &amp; the ballpark</caption>
+    <thead><tr><th>Destination</th><th class="num">Miles</th><th class="num">Drive</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Tradition Square<span class="sub">The closest thing to a walkable downtown — restaurants, green, events</span></td><td class="num">2.9</td><td class="num">~7 min</td></tr>
+      <tr><td class="name">Clover Park<span class="sub">New York Mets spring training</span></td><td class="num">3.5</td><td class="num">~8 min</td></tr>
+      <tr><td class="name">Downtown Fort Pierce<span class="sub">Historic waterfront, Saturday farmers market, marina</span></td><td class="num">13</td><td class="num">~22 min</td></tr>
+      <tr><td class="name">Downtown Stuart<span class="sub">Best small downtown on the Treasure Coast</span></td><td class="num">15</td><td class="num">~28 min</td></tr>
+      <tr><td class="name">Atlantic beaches<span class="sub">Hutchinson Island / Jensen Beach</span></td><td class="num">15–16</td><td class="num">~25–30 min</td></tr>
+      <tr><td class="name">Savannas Preserve State Park</td><td class="num">12</td><td class="num">~22 min</td></tr>
+      <tr><td class="name">Downtown West Palm Beach</td><td class="num">48</td><td class="num">~60 min</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="t-wrap">
+  <table>
+    <caption>Airports</caption>
+    <thead><tr><th>Airport</th><th class="num">Miles</th><th class="num">Drive</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Treasure Coast International (FPR)<span class="sub">Fort Pierce — general aviation and charter only, no scheduled commercial service</span></td><td class="num">14</td><td class="num">~20 min</td></tr>
+      <tr><td class="name">Vero Beach Regional (VRB)<span class="sub">Limited seasonal service</span></td><td class="num">24</td><td class="num">~35 min</td></tr>
+      <tr><td class="name">President Donald J. Trump International (DJT)<span class="sub">West Palm Beach — formerly Palm Beach International, renamed 9 July 2026. Booking code stays PBI until 18 Aug 2026, then DJT. This is the practical home airport.</span></td><td class="num">48</td><td class="num">~60 min</td></tr>
+      <tr><td class="name">Fort Lauderdale–Hollywood (FLL)</td><td class="num">87</td><td class="num">~1 hr 45</td></tr>
+      <tr><td class="name">Orlando International (MCO)</td><td class="num">94</td><td class="num">~2 hr</td></tr>
+      <tr><td class="name">Miami International (MIA)</td><td class="num">105</td><td class="num">~2 hr</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>The gate sits a few minutes off I-95 at the Crosstown Parkway interchange, with Florida's Turnpike also close. That access is the single biggest locational asset — it is what puts West Palm at an hour and Orlando at two.</p>
+
+  <h3>Schools</h3>
+  <p>Zoned to Bayshore Elementary (GreatSchools 4/10), Southern Oaks Middle, and St. Lucie West Centennial High (3/10, enrollment ~2,766, about 5 miles away). Allapattah Flats K-8 rates 7/10 and sits 2 miles out. Renaissance Charter School at Tradition is 1.9 miles. Largely irrelevant for a retirement purchase, but the weak zoned-high-school rating does narrow the family buyer pool at resale.</p>
+</section>
+
+<section>
+  <p class="tag">Market</p>
+  <h2>St. Lucie County right now</h2>
+  <p class="dek">Single-family in St. Lucie is holding up better than most of Florida. Condos are not. These are single-family homes, which puts them on the right side of that divide.</p>
+
+  <div class="t-wrap">
+  <table>
+    <caption>St. Lucie County — June 2026 vs. June 2025</caption>
+    <thead><tr><th>Metric</th><th class="num">Current</th><th class="num">Change</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Total home sales</td><td class="num">628</td><td class="num up">+9.2%</td></tr>
+      <tr><td class="name">Single-family sales</td><td class="num">523</td><td class="num up">+8.3%</td></tr>
+      <tr><td class="name">Active listings</td><td class="num">2,937</td><td class="num up">−12.9%</td></tr>
+      <tr><td class="name">Months supply — single-family<span class="sub">Under 6 months is conventionally a seller's market</span></td><td class="num">4.9</td><td class="num">—</td></tr>
+      <tr><td class="name">Months supply — condo</td><td class="num">8.3</td><td class="num">—</td></tr>
+      <tr><td class="name">% of original list price received</td><td class="num">96%</td><td class="num">—</td></tr>
+      <tr><td class="name">Days to contract</td><td class="num">63</td><td class="num down">from 52</td></tr>
+      <tr><td class="name">Days to closing</td><td class="num">105</td><td class="num down">from 94</td></tr>
+      <tr><td class="name">Distressed sales<span class="sub">REO + short sales</span></td><td class="num">1.4%</td><td class="num up">historic low</td></tr>
+      <tr><td class="name">Cash purchases</td><td class="num">28.2%</td><td class="num">vs 25% U.S.</td></tr>
+      <tr><td class="name">Total dollar volume</td><td class="num">$270M</td><td class="num up">+14.9%</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Statewide backdrop</h3>
+  <p>Florida's June 2026 single-family median was <strong>$432,000, up 4.9%</strong> year over year on sales up 9.3%. That is the Realtor-association read. There is a real counter-signal: index-based trackers using Zillow data put the statewide typical home value at about <strong>$392,443 in May 2026, down 3.0%</strong> year over year, with a quarter of active listings carrying a price cut and roughly 85% of Florida ZIP codes below their year-ago value.</p>
+  <p>Both can be true. Medians get pulled up by mix shift — Florida's million-dollar segment saw June sales up 40% — while the typical home is worth slightly less. <strong>The honest read is flat to modestly down in real terms, with sales volume genuinely recovering.</strong> Normalization, not a crash.</p>
+
+  <div class="callout warn">
+    <p><strong>Where the real distress is: condos.</strong> Post-Surfside reserve mandates are triggering six-figure special assessments statewide. Only 21 of 2,397 South Florida condo buildings are FHA-approved. Fannie Mae and Freddie Mac eliminate the limited review option for many condo loans from 3 August 2026. St. Lucie's condo median fell 6.6% year over year. None of this touches a single-family home in Astor Creek — but it is why you will read alarming Florida headlines that do not describe this purchase.</p>
+  </div>
+
+  <h3>Demand fundamentals</h3>
+  <p>Port St. Lucie's population is up roughly <strong>37.5% since the 2020 census</strong>, to about 284,000, and the Census Bureau ranks it the <strong>7th fastest-growing metro in the country</strong>. Consumer Affairs named it the No. 1 mid-size housing market for buyers in 2026, and ZIP 34987 — this ZIP — ranked hottest in America for inbound moves per capita. Primary origins: Long Island and Queens, in-state movers from Palm Beach and Broward, and Midwest retirees. That growth is the floor under this market.</p>
+</section>
+
+<section>
+  <p class="tag">Tax</p>
+  <h2>Florida-specific financial variables</h2>
+  <div class="t-wrap">
+  <table>
+    <tbody>
+      <tr><td class="name">No state income tax</td><td>None on wages, Social Security, pension, or retirement distributions. For a household relocating from New Jersey this is the largest single factor offsetting higher insurance and property tax.</td></tr>
+      <tr><td class="name">Homestead exemption</td><td>Up to $50,000 off assessed value on a primary residence — $25,000 against all levies, a second $25,000 against non-school levies. Must be filed. Does not apply to a second home or investment property.</td></tr>
+      <tr><td class="name">Save Our Homes cap</td><td>Once homesteaded, annual assessed-value increases are capped at 3% or CPI, whichever is lower. The protection compounds — but it starts from your purchase price, not the prior owner's basis.</td></tr>
+      <tr><td class="name">Portability</td><td>An existing Florida homesteaded owner can transfer accrued benefit to a new Florida home. Not available moving in from out of state.</td></tr>
+      <tr><td class="name">November 2026 ballot measure</td><td>A proposed expanded <strong>$250,000 homestead exemption</strong> passed the Florida Legislature on 2 June 2026 and goes to voters in November 2026, needing 60% to pass. If it passes it would materially cut non-school property tax on a homesteaded property; school taxes would still apply. Treat as upside, not as a planning assumption.</td></tr>
+      <tr><td class="name">Local tax trend</td><td>The City of Port St. Lucie approved a millage cut to 4.8750 for FY 2026-27 — its 11th consecutive annual reduction, 25% since 2016. The city portion is one line of the total bill, but the direction is favorable.</td></tr>
+      <tr><td class="name">Insurance market</td><td>Stabilizing after the 2022–23 spike. New carriers have entered, Citizens has shed policies back to private insurers, rate filings are moderating. A major hurricane loss year is the obvious risk to that trend.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <p class="tag">Alternatives</p>
+  <h2>Comparable golf and racquet communities</h2>
+  <p class="dek">A starting list for comparison, all within roughly 30 minutes. Confirm pricing and membership structures directly — club terms change more often than home prices.</p>
+
+  <div class="t-wrap">
+  <table>
+    <thead><tr><th>Community</th><th>Golf &amp; racquet</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td class="name">PGA Village Verano<span class="sub">Kolter · ~2 miles away</span></td><td>Cart-path access to PGA Golf Club — 54 holes by Tom Fazio and Pete Dye. Tennis, pickleball, resort amenities.</td><td>From $371,990<span class="sub">Membership optional, not bundled</span></td></tr>
+      <tr><td class="name">PGA Village / The Legacy</td><td>Two Fazio courses inside the gates, Har-Tru tennis, pickleball. Golf Digest top-75 resort recognition.</td><td>Wide range<span class="sub">34 subdivisions, condos to $5M estates</span></td></tr>
+      <tr><td class="name">Tesoro Club</td><td>Two championship courses (Arnold Palmer, Tom Watson), Swim &amp; Racquet Club, spa, ~100,000 sq ft clubhouse.</td><td>Luxury tier<span class="sub">Most upscale in the immediate area</span></td></tr>
+      <tr><td class="name">Ballantrae Golf &amp; Yacht Club<span class="sub">North Fork St. Lucie River</span></td><td>Golf plus deepwater boating. Santa Lucia River Club membership optional.</td><td>Mid tier<span class="sub">The pick if boating matters too</span></td></tr>
+      <tr><td class="name">Glynlea Golf &amp; Country Club at Wylder</td><td>New golf and country club community — the most direct competitor to Astor Creek on newness.</td><td>New build<span class="sub">Useful for negotiating leverage</span></td></tr>
+      <tr><td class="name">Harbour Ridge · Piper's Landing · Mariner Sands<span class="sub">Palm City / Stuart · 25–35 min</span></td><td>Established equity-membership clubs, mature landscaping, several with two courses.</td><td>Established<span class="sub">Older stock; equity buy-in required</span></td></tr>
+      <tr><td class="name">Del Webb Tradition · Riverland<span class="sub">55+</span></td><td>No golf on site, but extensive tennis, pickleball, sports complex, arts center.</td><td>55+ only<span class="sub">Lower carry, no mandatory club dues</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout info">
+    <p><strong>The structural comparison that matters.</strong> Astor Creek bundles a mandatory membership into the purchase with no initiation fee. PGA Village Verano and Ballantrae make membership optional. Del Webb and Riverland have no club at all. Golfing three times a week, the bundled model is excellent value. Golfing twice a month, you are paying roughly $5,000 a year for something you would rather buy à la carte — and that is a real argument for walking the community two miles down the road before signing.</p>
+  </div>
+</section>
+
+<section>
+  <p class="tag">Open items</p>
+  <h2>Questions to ask</h2>
+  <p class="dek">Each of these is a number that moves the decision and that is not published anywhere. Ask the sales gallery in writing.</p>
+
+  <ol class="check">
+    <li><b>Ask for the Waverly's base plan price.</b>The Priscilla's is published: $697,990, meaning that home carries $248,000 in premium and options. Kolter does not publish the Waverly's. Without it you cannot tell how much of $1,300,990 is house and how much is lot premium and finish selections. This is the single most useful number in the negotiation.</li>
+    <li><b>Get the itemized options list for both homes.</b>Every structural option and Design Studio selection with its price. That converts an opaque $355,000 gap into a line-by-line comparison you can argue with.</li>
+    <li><b>Ask what the homesites face.</b>Golf, lake, preserve, or garden — and which direction. Western exposure over the course is the premium orientation here and commands real money; a garden view does not. Neither listing states it.</li>
+    <li><b>Price out finishing the Waverly's outdoor kitchen.</b>It is a pre-plumb only. The cheaper Priscilla comes with a finished summer kitchen — grill, beverage refrigerator, sink, privacy wall. Get the cost to build the Waverly's out and add it to that side of the ledger.</li>
+    <li><b>Is there a CDD, and what is it?</b>Annual amount, remaining term, lump-sum payoff balance. Can be $1,000–$3,500 a year, billed with property taxes.</li>
+    <li><b>Confirm exact club dues and structure.</b>Annual figure, food-and-beverage minimum, cart and guest fees, whether dues are capped. And ask directly whether the no-initiation structure still applies — at least one listing in the community referenced a $50,000 initiation fee.</li>
+    <li><b>Get real insurance quotes on both homes before contract.</b>Bring wind mitigation and roof documentation. FEMA rates hurricane risk here Very High. This is the most volatile line in Florida ownership.</li>
+    <li><b>Confirm the recorded HOA fee and what it covers.</b>Published sources disagree by nearly $200 a month. Ask for the recorded budget, not a brochure.</li>
+    <li><b>Who controls the club, and when does it turn over?</b>Developer-controlled clubs can raise dues or restructure membership at transition. Ask the turnover schedule and what the reserve study shows.</li>
+    <li><b>What is the remaining buildout schedule?</b>Roughly 900 homes planned. How many closed, how many phases left, when does the last construction truck leave — and where do these two homesites sit relative to active construction?</li>
+    <li><b>Walk the Taylor Morrison inventory inside the same gates.</b>They start at $495,900 across 13 plans. Same club, same amenities, different price ladder.</li>
+    <li><b>Push hard on incentives.</b>Kolter has already cut one home in this community $55,000. The Waverly is finished and sitting as the most expensive home in the inventory — a standing-inventory position builders carry cost on every month. Ask about rate buydowns, closing cost credits, and lot premium waivers; builders flex far more on financing than on headline price.</li>
+    <li><b>Use your own agent, not the builder's.</b>The onsite representative works for Kolter. Independent representation costs the buyer nothing and is the highest-leverage decision in the whole process.</li>
+  </ol>
+</section>
+
+<footer>
+  <h4>Sources &amp; as-of dates</h4>
+  <ul>
+    <li>Home specifications and pricing: Kolter Homes listings for 13377 and 14176 SW Shinnecock Drive, retrieved 31 July 2026.</li>
+    <li>Kolter inventory, plans and completion dates: Kolter Homes community pages and Jome / NewHomeSource builder feeds, verified 31 July 2026.</li>
+    <li>Market statistics: MIAMI REALTORS® + RWorld / BeachesMLS St. Lucie County release, June 2026 data, published 17 July 2026; Florida Realtors Research Department statewide data, June 2026.</li>
+    <li>Counter-signal price index data: Momentum Realty analysis of Zillow Research data, through May 2026.</li>
+    <li>Tax: St. Lucie County 2025 millage; City of Port St. Lucie FY 2026-27 budget workshop, July 2026; Ownwell county assessment data.</li>
+    <li>Environmental risk: FEMA National Risk Index. Walk/Bike Score, Soundscore, AirNow via Jome.</li>
+    <li>Airport renaming: Palm Beach County Department of Airports, effective 9 July 2026.</li>
+    <li>Distances calculated from community entrance coordinates; drive times are estimates.</li>
+  </ul>
+  <h4>Please note</h4>
+  <p>Prepared as a research summary, not as legal, tax, or financial advice, and not by a licensed real estate professional. Builder pricing, HOA and club dues, CDD assessments, tax rates and insurance quotes all change without notice. Every figure should be independently verified before it informs a purchase decision. Consult a Florida-licensed real estate attorney, a CPA, and a local buyer's agent.</p>
+</footer>
+
+</div>
+</body>
+</html>
