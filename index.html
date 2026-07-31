@@ -57,27 +57,31 @@ h1{
 
 /* ---------- section nav ---------- */
 .navbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.97);border-bottom:1px solid var(--border)}
-.navbar-inner{max-width:1040px;margin:0 auto;padding:10px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.navbar .doc{font-size:13px;color:var(--foggy)}
+.navbar-inner{max-width:1040px;margin:0 auto;padding:10px 32px;display:flex;align-items:center;justify-content:center}
 #navToggle{
-  display:flex;align-items:center;gap:9px;font-family:inherit;font-size:13px;font-weight:500;
-  color:var(--charcoal);background:#fff;border:1px solid var(--border);border-radius:6px;
-  padding:8px 14px;cursor:pointer;line-height:1;
+  display:flex;align-items:center;gap:9px;font-family:inherit;font-size:13.5px;font-weight:700;
+  color:#fff;background:var(--teal);border:1px solid var(--teal);border-radius:999px;
+  padding:10px 22px;cursor:pointer;line-height:1;letter-spacing:.01em;
 }
-#navToggle:hover{background:var(--bg-alt);border-color:#DDD}
+#navToggle:hover{background:var(--teal-dark);border-color:var(--teal-dark)}
+#navToggle:focus-visible{outline:2px solid var(--teal-dark);outline-offset:2px}
 #navToggle svg{display:block;flex:0 0 16px}
-#navPanel{max-height:0;overflow:hidden;transition:max-height .25s ease;background:#fff;border-bottom:1px solid transparent}
-#navPanel.open{max-height:520px;border-bottom-color:var(--border)}
-.navlinks{max-width:1040px;margin:0 auto;padding:8px 22px 16px;display:grid;grid-template-columns:1fr 1fr;gap:2px}
+#navPanel{
+  position:absolute;left:0;right:0;top:100%;
+  max-height:0;overflow:hidden;transition:max-height .25s ease;
+  background:#fff;border-bottom:1px solid transparent;
+}
+#navPanel.open{max-height:520px;border-bottom-color:var(--border);box-shadow:0 8px 18px rgba(0,0,0,.07)}
+.navlinks{max-width:1040px;margin:0 auto;padding:10px 22px 16px;display:grid;grid-template-columns:1fr 1fr;gap:2px}
 .navlinks a{
   display:block;font-size:14px;text-decoration:none;color:var(--black);
-  padding:10px 10px;border-radius:6px;
+  padding:10px 12px;border-radius:6px;
 }
 .navlinks a:hover{background:var(--bg-alt);color:var(--charcoal)}
-.navlinks a.key{color:var(--teal);font-weight:500}
+.navlinks a.key{color:var(--teal);font-weight:700}
 
 /* ---------- sections ---------- */
-section{padding:56px 0 0;border-top:1px solid var(--border);margin-top:56px;scroll-margin-top:60px}
+section{padding:56px 0 0;border-top:1px solid var(--border);margin-top:56px;scroll-margin-top:72px}
 section:first-of-type{border-top:none;margin-top:0}
 .tag{
   font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
@@ -188,20 +192,17 @@ footer li{margin-bottom:4px}
   .mast{padding:44px 0 34px}
   .mast-inner{padding:0 20px}
   .navbar-inner{padding:9px 20px}
-  .navbar .doc{font-size:12px}
-  .navlinks{padding:8px 12px 14px}
+  .navlinks{padding:10px 12px 14px}
   .pair{grid-template-columns:1fr}
   table{font-size:14px}
   th,td{padding:12px 12px}
   .cost-cond{margin-left:0;text-align:left;width:100%}
   .t-wrap{overflow-x:auto}
-  section{scroll-margin-top:56px}
+  section{scroll-margin-top:66px}
 }
 @media (max-width:460px){
   .navlinks{grid-template-columns:1fr}
-  #navPanel.open{max-height:460px}
-  .navbar .doc{display:none}
-  .navbar-inner{justify-content:flex-end}
+  #navPanel.open{max-height:470px}
 }
 @media print{
   body{font-size:10.5pt}
@@ -231,9 +232,8 @@ footer li{margin-bottom:4px}
 
 <nav class="navbar" aria-label="Section navigation">
   <div class="navbar-inner">
-    <span class="doc">Astor Creek briefing</span>
     <button id="navToggle" type="button" aria-expanded="false" aria-controls="navPanel">
-      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 3.5h14M1 8h14M1 12.5h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 3.5h14M1 8h14M1 12.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
       <span class="lbl">Sections</span>
     </button>
   </div>
@@ -645,6 +645,10 @@ footer li{margin-bottom:4px}
   b.addEventListener('click',function(){set(!p.classList.contains('open'));});
   p.addEventListener('click',function(e){if(e.target.tagName==='A')set(false);});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+  document.addEventListener('click',function(e){
+    if(!p.classList.contains('open'))return;
+    if(!p.contains(e.target)&&!b.contains(e.target))set(false);
+  });
 })();
 </script>
 
